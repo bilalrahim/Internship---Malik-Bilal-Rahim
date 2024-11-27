@@ -1,0 +1,17 @@
+{
+  "name": "internship---malik-bilal-rahim",
+  "version": "1.0.0",
+  "description": "BE Internship Challenge",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server",
+    "start": "node src/server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
+  }
+}
