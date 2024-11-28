@@ -4,11 +4,11 @@
   "description": "BE Internship Challenge",
   "main": "src/server.js",
   "scripts": {
-    "dev": "nodemon src/server",
+    "dev": "nodemon src/server.js --ignore datastore/",
     "start": "node src/server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "malikbilalrahim",
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.1",

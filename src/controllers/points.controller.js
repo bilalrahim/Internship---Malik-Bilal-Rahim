@@ -1,30 +1,37 @@
 
-const addPoints = (req, res) => {
-  const { userId, points } = req.body;
+const { addPoints: addPointsService, spendPoints: spendPointsService, getPointsBalance: getPointsBalanceService} = require('../services/points.service');
 
-  if (!userId || !points) {
-    return res.status(400).json({ error: "userId and points are required" });
+const addPoints = (req, res) => {
+  const { payer, points, timestamp } = req.body;
+
+  if (!payer || !points || !timestamp) {
+    return res.status(400).json({ success: false, message: '[request-body-incomplete]'})
   }
 
-  res.status(201).json({ message: `Added ${points} points for user ${userId}` });
+  addPointsService(payer, points, timestamp);  
+
+  return res.status(200).send();
 };
 
-
 const spendPoints = (req, res) => {
-  const { userId, pointsToSpend } = req.body;
-
-  if (!userId || !pointsToSpend) {
-    return res.status(400).json({ error: "userId and pointsToSpend are required" });
+  const { points } = req.body;
+  if (!points) {
+    return res.status(400).json({ success: false, message: '[request-body-incomplete]'})
   }
 
-  res.status(200).json({ message: `Spent ${pointsToSpend} points for user ${userId}` });
+  const deductions = spendPointsService(points);
+  if (deductions?.success) {
+    return res.status(200).json([deductions?.data]);
+  }
+
+  res.status(400).send(deductions?.message)
+  
 };
 
 const getPointsBalance = (req, res) => {
 
-  
-  const balance = 1000;
-  res.status(200).json({ balance });
+  const pointsBalance = getPointsBalanceService();
+  res.status(200).json(pointsBalance);
 };
 
 module.exports = {
