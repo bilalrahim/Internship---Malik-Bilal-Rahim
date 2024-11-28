@@ -41,8 +41,8 @@ The repository contains a Postman collection for testing the API endpoints. To u
 
 The collection includes the following API calls:
 
-- `POST /add` to add points.
-- `POST /spend` to spend points.
-- `GET /balance` to retrieve the points balance for each payer.
+- `POST host/api/add` to add points.
+- `POST host/api/spend` to spend points.
+- `GET host/api/balance` to retrieve the points balance for each payer.
 
 

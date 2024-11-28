@@ -17,7 +17,7 @@ router.post(
   spendPoints
 );
 
-router.get(
+router.post(
   "/balance",
   getPointsBalance
 );
