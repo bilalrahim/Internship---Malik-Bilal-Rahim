@@ -10,7 +10,6 @@ const path = require("path");
 const writeDataToFile = (filePath, data) => {
   try {
     fs.writeFileSync(path.resolve(filePath), JSON.stringify(data, null, 2), "utf8");
-    console.log(`Data successfully written to ${filePath}`);
   } catch (error) {
     console.error(`Error writing data to file: ${error.message}`);
   }
