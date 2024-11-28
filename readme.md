@@ -43,6 +43,6 @@ The collection includes the following API calls:
 
 - `POST host/api/add` to add points.
 - `POST host/api/spend` to spend points.
-- `GET host/api/balance` to retrieve the points balance for each payer.
+- `GET host/api/balance` to retrieve the points balance for each user.
 
 
