@@ -35,7 +35,7 @@ const spendPoints = (spendAmount) => {
   const totalPoints = transactions.reduce((acc, { points }) => acc + points, 0);
 
   if (spendAmount > totalPoints) {
-    return { success: false, message: "[Not-Enough-Points]" };
+    return { success: false, message: "[not-enough-points]" };
   }
 
   transactions.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));

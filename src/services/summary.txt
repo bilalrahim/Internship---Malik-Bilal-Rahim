@@ -1,0 +1,17 @@
+1. I have several years of experience of building REST API's in them.
+
+2. Advanatages:
+  1. Well architected.
+  2. Cleanly written.
+  3. Modular.
+
+  Disadvanatages:
+  1. No Database.
+  2. It saves negative points to the payer which should not be the case but that is what the sample test data had. If I had added
+     a condition to prevent negative values, I would not have gotten the result of the test data.
+
+3. I have faced many challenges that were quite unique and new, one of my favourite one was when I was working as a backend engineer at a startup and we had to ensure that our platform; a marketplace
+   for sharing/renting everyday household items, could have only one account per user. What I found most challenging was figuring out how to solve that problem. I came up with the idea of using stripe identity
+   which would ask user for their driving license which strip would identify and ensure we only have that one single user on our platform.
+
+Thank you for reviewing this project! 😊
